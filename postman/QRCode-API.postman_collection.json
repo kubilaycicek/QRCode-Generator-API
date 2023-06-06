@@ -1,0 +1,73 @@
+{
+	"info": {
+		"_postman_id": "33669f78-0d6d-47b6-8acf-572c89205697",
+		"name": "QRCode-API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "generateQRCode",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"codeText\":\"kubilay\",\r\n    \"width\":200,\r\n    \"height\":300\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/qrcode-service/generateQRCode",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"qrcode-service",
+						"generateQRCode"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "generateAndDownloadQRCode",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"codeText\":\"kubilay\",\r\n    \"width\":200,\r\n    \"height\":300\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/qrcode-service/generateAndDownloadQRCode",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"qrcode-service",
+						"generateAndDownloadQRCode"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
