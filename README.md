@@ -1,6 +1,6 @@
 # QRCode Generator API
 
-This is a qrcode  generater API. I used the google zxing library.
+This is a qrcode  generater API. I used the google zxing library. Also I added the postman request collection for you.
 
 ## Used Technologies
 * Java 17
