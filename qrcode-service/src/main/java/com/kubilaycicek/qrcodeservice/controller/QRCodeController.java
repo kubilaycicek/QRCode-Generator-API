@@ -2,7 +2,7 @@ package com.kubilaycicek.qrcodeservice.controller;
 
 
 import com.kubilaycicek.qrcodeservice.data.request.GenerateQRCodeRequest;
-import com.kubilaycicek.qrcodeservice.data.response.GeneretedQRCodeResponse;
+import com.kubilaycicek.qrcodeservice.data.response.GeneratedQRCodeResponse;
 import com.kubilaycicek.qrcodeservice.util.QRCodeGeneratorUtil;
 import org.springframework.http.*;
 import org.springframework.web.bind.annotation.*;
@@ -16,7 +16,7 @@ public class QRCodeController {
     }
 
     @GetMapping(value = "generateQRCode")
-    public ResponseEntity<GeneretedQRCodeResponse> generateQRCode(@RequestBody GenerateQRCodeRequest request) {
-        return ResponseEntity.status(HttpStatus.OK).body(new GeneretedQRCodeResponse(QRCodeGeneratorUtil.getQRCodeImage(request.codeText(), request.width(), request.height())));
+    public ResponseEntity<GeneratedQRCodeResponse> generateQRCode(@RequestBody GenerateQRCodeRequest request) {
+        return ResponseEntity.status(HttpStatus.OK).body(new GeneratedQRCodeResponse(QRCodeGeneratorUtil.getQRCodeImage(request.codeText(), request.width(), request.height())));
     }
 }
